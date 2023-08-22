@@ -51,11 +51,17 @@ function Skill(){
                                 <p className={style.textr}>noob</p>
                                 <p className={style.textr}>pro</p>
                             </div></span></li>
-                <li className={style.skillName}>API<span>
+                <li className={style.skillName}>RestAPI<span>
                 <div className={`${rankIsVisible ? style.rankapi : style.rank}`}>
                                 <p className={style.textr}>noob</p>
                                 <p className={style.textr}>pro</p>
                             </div></span></li>
+                <li className={style.skillName}>Node.Js<span>
+                <div className={`${rankIsVisible ? style.ranknjs : style.rank}`}>
+                                <p className={style.textr}>noob</p>
+                                <p className={style.textr}>pro</p>
+                            </div></span></li>
+                            
             </ul>
         </div>
     )

@@ -72,7 +72,7 @@
         width: 15em;
         background-color: #a4a4a4;
     }
-    .rankhtml, .rankcss,.rankjs,.rankrjs,.ranklrv,.rankphp,.rankmysql,.rankbs,.rankapi{
+    .rankhtml, .rankcss,.rankjs,.rankrjs,.ranklrv,.rankphp,.rankmysql,.rankbs,.rankapi,.ranknjs{
         display: flex;
         justify-content: space-between;
         height: 30px;
@@ -111,7 +111,7 @@
         position: absolute;
         content: "";
         height: 30px;
-        width: 10em;
+        width: 11em;
         background: linear-gradient(to right, var(--jingga), var(--red));
         background-size: 15em;
         animation: skill3 4s ease;
@@ -138,7 +138,7 @@
         position: absolute;
         content: "";
         height: 30px;
-        width: 9em;
+        width: 10.6em;
         background: linear-gradient(to right, var(--jingga), var(--red));
         background-size: 15em;
         animation: skill6 4s ease;
@@ -147,7 +147,7 @@
         position: absolute;
         content: "";
         height: 30px;
-        width: 8em;
+        width: 10em;
         background: linear-gradient(to right, var(--jingga), var(--red));
         background-size: 15em;
         animation: skill7 4s ease;
@@ -165,10 +165,19 @@
         position: absolute;
         content: "";
         height: 30px;
-        width: 4em;
+        width: 6em;
         background: linear-gradient(to right, var(--jingga), var(--red));
         background-size: 15em;
         animation: skill9 4s ease-out;
+    }
+    .ranknjs::before{
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 5em;
+        background: linear-gradient(to right, var(--jingga), var(--red));
+        background-size: 15em;
+        animation: skill10 4s ease-out;
     }
 
     @keyframes skill1 {
@@ -194,7 +203,7 @@
             width: 0em;
         }
         100%{
-            width: 10em;
+            width: 11em;
         }
         
     }
@@ -221,7 +230,7 @@
             width: 0em;
         }
         100%{
-            width: 9em;
+            width: 10.6em;
         }
         
     }
@@ -230,7 +239,7 @@
             width: 0em;
         }
         100%{
-            width: 8em;
+            width: 10em;
         }
         
     }
@@ -248,7 +257,16 @@
             width: 0em;
         }
         100%{
-            width: 4em;
+            width: 6em;
+        }
+        
+    }
+    @keyframes skill10 {
+        0%{
+            width: 0em;
+        }
+        100%{
+            width: 5em;
         }
         
     }

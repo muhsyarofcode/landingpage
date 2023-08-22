@@ -75,7 +75,6 @@ function Home() {
             </div>
             <Plx className='imgandtext'parallaxData={parallaxData}>
                 <img className='ft-img' src={foto} alt='foto'/>
-                <h3>Berjuang</h3>
             </Plx>
         </div>
     )
