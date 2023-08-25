@@ -11,6 +11,10 @@ import P3 from "../pages/projectspage/project3";
 import P4 from "../pages/projectspage/project4";
 import P5 from "../pages/projectspage/project5";
 import P6 from "../pages/projectspage/project6";
+import Dashboard from "../components/dashboard/dashboard";
+import Login from "../components/login/login";
+import Register from "../components/register/register";
+import LoginGoogle from "../components/loginGoogle/login";
 
 
 
@@ -47,7 +51,21 @@ function Route (){
         },
         {
           path: "/Connect",
+          element: <Login/>
         },
+        {
+          path: "/Connect/register",
+          element: <Register/>
+        },
+        {
+          path: "/Connect/dashboard",
+          element: <Dashboard/>
+        }
+        ,
+        {
+          path: "/Connect/authGoogle",
+          element: <LoginGoogle/>
+        }
       ]);
     
     return(
