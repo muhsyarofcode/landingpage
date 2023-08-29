@@ -1,64 +1,22 @@
-import React, {useState} from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import Button from 'react-bootstrap/Button';
+import googleSvg from '../../assets/googleSvg.svg'
+import Login from "../loginapp/loginapp";
 
-const Login = () => {
-    const [email,setEmail] = useState('');
-    const [password,setPassword] = useState('');
-    const [msg, setMsg] = useState('');
-    const navigate = useNavigate();
-    const Auth = async(e, res) => {
-        e.preventDefault();
-        try {
-            await axios.post('https://rich-red-llama-wig.cyclic.cloud/login',{
-                email: email,
-                password: password
-            },{
-                withCredentials:true
-            });
-            navigate("/Connect/dashboard");
-        } catch (error) {
-            if(error.response){
-                setMsg(error.response.data.msg)
-            }
-        }
+const Portal = () => {
+    const AuthGoogle = async() => {
+        window.open("https://ultramarine-hen-kilt.cyclic.app/loginGoogle","_self")
     }
     return(
-        <section className="hero has-background-grey-light is-fullheight is-fullwidth">
-          <div className="hero-body">
-            <div className="container">
-                <div className="columns is-centered">
-                    <div className="column is-4-desktop">
-                        <div className="box">
-                            <form onSubmit={Auth} >
-                        <p className="has-text-center">{msg}</p>
-                            <div className="field mt-5">
-                                <label htmlFor="username" className="label">Email or Username</label>
-                                <div className="controls">
-                                    <input type="text" name="username" className="input" placeholder="Username"
-                                    value={email} onChange={(e) => setEmail(e.target.value)}/>
-                                </div>
-                            </div>
-                            <div className="field mt-5">
-                                <label htmlFor="password" className="label">Password</label>
-                                <div className="controls">
-                                    <input type="password" name="password" className="input" placeholder="********"
-                                     value={password} onChange={(e) => setPassword(e.target.value)}/>
-                                </div>
-                            </div>
-                            <div className="field mt-5">
-                                <button className="button is-success is-fullwidth">Login</button>
-                            </div>
-                            </form>
-                            <p className="mt-3">login with account google <a href="/Connect/authGoogle">Login</a></p>
-                            <p className="mt-3">don't have an account? <a href="/Connect/register">Sign Up</a></p>
-                        </div>
-                    </div>
-                </div>
+        <section className="d-flex-column justify-content-center m-3">
+            <div className="d-flex justify-content-center">
+                <Button className="mt-5" onClick={AuthGoogle} variant="warning"><img className="m-1" src={googleSvg} alt="svg" height={25}/> Sign up with Google </Button>
             </div>
-          </div>
+            <div className="">
+                <Login/>
+            </div>
         </section>
     )
 }
 
-export default Login;
+export default Portal;

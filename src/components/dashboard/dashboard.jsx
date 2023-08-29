@@ -3,6 +3,7 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 import Navbar from "../navbarConnect/navbar";
 import { useNavigate} from "react-router-dom"
+import Button from 'react-bootstrap/Button';
 
 const Dashboard = () => {
     const [name, setName] = useState('');
@@ -16,7 +17,7 @@ const Dashboard = () => {
 
     const refreshToken = async(res,req) => {
         try {
-            const response = await axios.get('https://rich-red-llama-wig.cyclic.cloud/token',{
+            const response = await axios.get('https://ultramarine-hen-kilt.cyclic.app/token',{
                 withCredentials: true
             });
             setToken(response.data)
@@ -30,7 +31,7 @@ const Dashboard = () => {
     }
 
     const getUsers = async() =>{
-        const response = await axios.get('https://rich-red-llama-wig.cyclic.cloud/users',{
+        const response = await axios.get('https://ultramarine-hen-kilt.cyclic.app/users',{
             withCredentials: true,
             headers:{
                 Authorization: `Bearer ${token}`
@@ -43,10 +44,10 @@ const Dashboard = () => {
     return(
         <div>
             <Navbar/>
-            <div className="container mt-5">
-                <h1 className="title ml-5">Welcome Back {name}</h1>
-                <button className="button is-info ml-3" onClick={getUsers}>Get Users</button>
-                <div className="ml-5 mt-5"> 
+            <div className="container">
+                <h1 className="text-center mt-3">Welcome Back <h1 className="text-primary">{name}</h1></h1>
+                <Button className="mt-3" onClick={getUsers} variant="warning">Get Users</Button>
+                <div className="m-2">
                 {files.map((file, idx) => (
                         <div key={idx}>
                             <p>{file.id}</p>

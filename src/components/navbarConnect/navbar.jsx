@@ -1,13 +1,14 @@
 import React from 'react';
 import { useNavigate} from "react-router-dom";
 import axios from "axios";
+import Button from 'react-bootstrap/Button';
 
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const Logout = async() => {
+  const out = async() => {
     try {
-        await axios.delete('https://rich-red-llama-wig.cyclic.cloud/logout',{
+        await axios.delete('https://ultramarine-hen-kilt.cyclic.app/out',{
           withCredentials:true
         });
         navigate("/Connect")
@@ -19,11 +20,12 @@ const Navbar = () => {
 }
 
   return (
-    <div className='container mt-5 is-flex is-justify-content-space-between'>
-      <h1 className='ml-5'>MSH</h1>
-      <button onClick={Logout} className="button is-light mr-5">
-        Log Out
-      </button>
+    <div className='container d-flex justify-content-between mt-3'>
+      <h1 className='text-center'>MSH</h1>
+      <div>
+        <Button onClick={out} variant="danger">Log Out</Button>
+      </div>
+      
     </div>
   )
 }

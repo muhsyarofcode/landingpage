@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 const Register = () => {
     const [name,setName] = useState('');
@@ -13,7 +15,7 @@ const Register = () => {
     const Register = async(e) => {
         e.preventDefault();
         try {
-            await axios.post('https://rich-red-llama-wig.cyclic.cloud/users',{
+            await axios.post('https://ultramarine-hen-kilt.cyclic.app/users',{
                 name: name,
                 email: email,
                 password: password,
@@ -28,52 +30,34 @@ const Register = () => {
         }
     }
     return(
-        <section className="hero has-background-grey-light is-fullheight is-fullwidth">
-          <div className="hero-body">
-            <div className="container">
-                <div className="columns is-centered">
-                    <div className="column is-4-desktop">
-                        <div className="box">
-                        <form onSubmit={Register} >
-                            <p className="has-text-center">{msg}</p>
-                            <div className="field mt-5">
-                                <label className="label">Name</label>
-                                <div className="controls">
-                                    <input type="text" className="input" placeholder="Name"
-                                    value={name} onChange={(e) => setName(e.target.value)}/>
-                                </div>
-                            </div>
-                            <div className="field mt-5">
-                                <label className="label">Email</label>
-                                <div className="controls">
-                                    <input type="text" className="input" placeholder="Email"
-                                    value={email} onChange={(e) => setEmail(e.target.value)}/>
-                                </div>
-                            </div>
-                            <div className="field mt-5">
-                                <label className="label">Password</label>
-                                <div className="controls">
-                                    <input type="password" className="input" placeholder="********"
-                                    value={password} onChange={(e) => setPassword(e.target.value)}/>
-                                </div>
-                            </div>
-                            <div className="field mt-5">
-                                <label className="label">Confirm Password</label>
-                                <div className="controls">
-                                    <input type="password" className="input" placeholder="********"
-                                    value={confPassword} onChange={(e) => setConfPassword(e.target.value)}/>
-                                </div>
-                            </div>
-                            <div className="field mt-5">
-                                <button className="button is-success is-fullwidth">Register</button>
-                            </div>
-                        </form>
-                        <p className="mt-3">already have an account? <a href="/Connect">Sign In</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
+        <section className="m-5">
+            <p className="text-center">{msg}</p>
+            <Form onSubmit={Register}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control  type="text" className="input" placeholder="Name"
+                    value={name} onChange={(e) => setName(e.target.value)} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control  type="email" className="input" placeholder="Email"
+                    value={email} onChange={(e) => setEmail(e.target.value)}/>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" className="input" placeholder="********"
+                    value={password} onChange={(e) => setPassword(e.target.value)} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Control type="password" className="input" placeholder="********"
+                    value={confPassword} onChange={(e) => setConfPassword(e.target.value)} />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
+            </Form>
+          <p className="mt-3">already have an account? <a href="/Connect">Sign In</a></p>
         </section>
     )
 }
