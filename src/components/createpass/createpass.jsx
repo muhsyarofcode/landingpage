@@ -32,7 +32,7 @@ const CreatePass = (res,req) => {
     return(
         <div className="m-5">
             <h1 className="text-center">Create password for App</h1>
-            <p>{msg}</p>
+            <p className="text-danger">{msg}</p>
             <Form onSubmit={Auth}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Confirm Email address</Form.Label>

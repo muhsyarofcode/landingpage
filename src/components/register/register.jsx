@@ -31,7 +31,7 @@ const Register = () => {
     }
     return(
         <section className="m-5">
-            <p className="text-center">{msg}</p>
+            <p className="text-center text danger">{msg}</p>
             <Form onSubmit={Register}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>

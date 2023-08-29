@@ -27,7 +27,7 @@ const Login = () => {
     }
     return(
         <section className="m-5">
-            <p>{msg}</p>
+            <p className="text-danger">{msg}</p>
             <Form onSubmit={Auth}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
