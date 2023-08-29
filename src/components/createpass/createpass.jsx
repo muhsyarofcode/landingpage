@@ -47,7 +47,7 @@ const CreatePass = (res,req) => {
                     <Form.Control type="password" name="password" className="input" placeholder="********" 
                     value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
                     <Form.Label>Confirm Password</Form.Label>
                     <Form.Control type="password" className="input" placeholder="********"
                     value={confPassword} onChange={(e) => setConfPassword(e.target.value)} />
