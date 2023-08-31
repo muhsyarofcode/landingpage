@@ -14,6 +14,9 @@ import P6 from "../pages/projectspage/project6";
 import Dashboard from "../components/dashboard/dashboard";
 import CreatePass from "../components/createpass/createpass";
 import Portal from "../components/login/login";
+import PrivasiPolicy from "../components/privacyPolicy/PrivasiPolicy";
+import TermandCondition from "../components/termandcondition/termandCondition";
+import Disclaimer from "../components/disclaimer/disclaimer";
 
 
 
@@ -53,12 +56,24 @@ function Route (){
           element: <Portal/>
         },
         {
-          path: "/Connect/dashboard",
+          path: "/Connectdashboard",
           element: <Dashboard/>
         },
         {
-          path: "/Connect/createpassword",
+          path: "/Connectcrtpass",
           element: <CreatePass/>
+        },
+        {
+          path: "/privacypolicy",
+          element: <PrivasiPolicy/>
+        },
+        {
+          path: "/term&condition",
+          element: <TermandCondition/>
+        },
+        {
+          path: "/disclaimer",
+          element: <Disclaimer/>
         }
 
       ]);

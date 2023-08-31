@@ -18,7 +18,7 @@ const Login = () => {
             },{
                 withCredentials:true
             });
-            navigate("/Connect/dashboard");
+            navigate("/Connectdashboard");
         } catch (error) {
             if(error.response){
                 setMsg(error.response.data.msg)
@@ -26,8 +26,8 @@ const Login = () => {
         }
     }
     return(
-        <section className="m-5">
-            <p className="text-danger">{msg}</p>
+        <section className="m-4">
+            <p className="text-danger text-center mt-4">{msg}</p>
             <Form onSubmit={Auth}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -43,9 +43,11 @@ const Login = () => {
                     <Form.Control type="password" name="password" className="input" placeholder="********" 
                     value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </Form.Group>
-                <Button variant="primary" type="submit">
-                    Login
-                </Button>
+                <div className="d-flex justify-content-center">
+                    <Button variant="primary" type="submit">
+                        Login
+                    </Button>
+                </div>
             </Form>
         </section>
     )

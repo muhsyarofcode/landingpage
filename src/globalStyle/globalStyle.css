@@ -24,7 +24,37 @@
     --bg3 : #4c4c4c;
 
 }
-
+.createPassword{
+    background-image: url("../assets/bgLogin.jpg");
+    height: 100vh;
+}
+.linkFooter{
+    text-decoration: none;
+}
+.VerticalLine2{
+    height: 2em;
+    width: 2px;
+    border-left: 2px solid var(--bg3);
+    margin: 0 1em;
+}
+.VerticalLine{
+    height: 20em;
+    border-left: 2px solid var(--bg3);
+    width: 2px;
+    margin-left: 1em;
+}
+.ContainerLoginSignup{
+    background-image: url("../assets/bgLogin.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 81.5vh;
+}
+.ContainerSignup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .load{
     height: 100vh;
     display: flex;
@@ -584,6 +614,18 @@
     
 }
 @media screen and (max-width: 800px) {
+    .VerticalLine{
+        height: 2px;
+        width: 20em;
+        border-left: 0;
+        border-top: 2px solid var(--bg3);
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+    .ContainerLoginSignup{
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .wrp{
         display: flex;
         justify-content: center;
@@ -609,6 +651,13 @@
     }
 }
 @media screen and (max-width: 600px) {
+    .VerticalLine2{
+        height: 2px;
+        width: 10em;
+        border-left: 0;
+        border-top: 2px solid var(--bg3);
+        margin: 5px 0;
+    }
     .container-dragdrop{
         border: dashed 1px  var(--white);
         width: 15em;

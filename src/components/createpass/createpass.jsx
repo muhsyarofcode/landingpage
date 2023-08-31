@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import "../../globalStyle/globalStyle.css"
 
 
 const CreatePass = (res,req) => {
@@ -14,7 +15,7 @@ const CreatePass = (res,req) => {
     const Auth = async(e, res) => {
         e.preventDefault();
         try {
-            await axios.post('https://ultramarine-hen-kilt.cyclic.app/confgoogle',{
+            await axios.post('https://ultramarine-hen-kilt.cyclic.app/createpassword',{
                 email: email,
                 password: password,
                 confPassword: confPassword
@@ -30,9 +31,10 @@ const CreatePass = (res,req) => {
         }
     }
     return(
-        <div className="m-5">
+    <div className="createPassword ">
+        <div className="p-5">
             <h1 className="text-center">Create password for App</h1>
-            <p className="text-danger">{msg}</p>
+            <p className="text-danger mt-4 text-center">{msg}</p>
             <Form onSubmit={Auth}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Confirm Email address</Form.Label>
@@ -57,8 +59,9 @@ const CreatePass = (res,req) => {
                     Create password
                 </Button>
             </Form>
-            <p className="mt-3">already have a password? <a href="/Connect">go back to connect</a></p>
+            <p className="mt-3">already have a password? <a className="text-primary" href="/Connect">go back to connect</a></p>
         </div>
+    </div>
     )
 }
 
