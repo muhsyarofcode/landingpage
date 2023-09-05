@@ -428,19 +428,36 @@
     background-color: var(--bg1);
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
-.kotak{
-    width: 27vw;
-    height: 27vw;
-    margin: 1em;
-    cursor: pointer;
+.titleProject{
+    text-shadow: #141414 2px 2px 1px;
+    font-weight: 600 ;
 }
-.item{
+.swiper {
+    width: 240px;
+    height: 320px;
+  }
+  
+  .swiper-slide {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+ 
+.kotak{
+    transition: 0.5s;
 }
 .kotak:hover{
-    transform: scale(1.1);
-    transition: 0.5s;
+    transform: scale(1.6);
+}
+.titleProject{
+    position: absolute;
 }
 
 
