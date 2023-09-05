@@ -46,8 +46,6 @@ const DashboardAdmin = () => {
                                     <thead>
                                         <tr>
                                         <th>Id</th>
-                                        <th>GoogleId</th>
-                                        <th>FacebookId</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Photo</th>
@@ -57,11 +55,9 @@ const DashboardAdmin = () => {
                                     <tbody>
                                         <tr>
                                         <td>{file.id}</td>
-                                        <td>{file.googleId}</td>
-                                        <td>{file.facebookId}</td>
                                         <td>{file.name}</td>
                                         <td>{file.email}</td>
-                                        <td>{file.photo}</td>
+                                        <td><img src={file.photo} alt="userphoto" height={30} width={30}/></td>
                                         <td>{file.role}</td>
                                         </tr>
                                     </tbody>
