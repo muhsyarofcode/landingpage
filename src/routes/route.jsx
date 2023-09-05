@@ -19,6 +19,7 @@ import PrivatChat from "../components/privatchat/privatchat";
 import StartChat from "../components/startedchat/startedchat";
 import ProfileUser from "../components/profileUser/profileUser";
 import CustomizeApp from "../components/customize/customize";
+import DashboardAdmin from "../components/dashboardadmin/dashboardadmin";
 
 const RoutePage = () => {
     return(
@@ -40,6 +41,7 @@ const RoutePage = () => {
                     <Route path="/connectchatapp/privatchat" element={<PrivatChat/>} errorElement={<ErrorPage/>}/>
                     <Route path="/connectchatapp/profileuser" element={<ProfileUser/>} errorElement={<ErrorPage/>}/>
                     <Route path="/connectchatapp/customize" element={<CustomizeApp/>} errorElement={<ErrorPage/>}/>
+                    <Route path="/connectchatapp/dashboardadmin" element={<DashboardAdmin/>} errorElement={<ErrorPage/>}/>
                   </Route>
                   <Route path="/Connectcrtpass" element={<CreatePass/>} errorElement={<ErrorPage/>}/>
                   <Route path="/privacypolicy" element={<PrivasiPolicy/>} errorElement={<ErrorPage/>}/>

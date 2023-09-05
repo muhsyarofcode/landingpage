@@ -7,6 +7,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
 const ProfileUser = () => {
+    const [role, setRole] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [photo, setPhoto] = useState('');
@@ -14,7 +15,7 @@ const ProfileUser = () => {
     //const [token, setToken] = useState('');
     //const [files, setFiles] = useState([]);
     const navigate = useNavigate();
-
+    const admin = "admin"
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -34,6 +35,7 @@ const ProfileUser = () => {
             setName(decoded.name)
             setPhoto(decoded.photo)
             setEmail(decoded.email)
+            setRole(decoded.role)
         } catch (error) {
             if(error.response){
                 navigate("/Connect")
@@ -41,6 +43,9 @@ const ProfileUser = () => {
         }
     }
 
+    const navigateAdmin = () =>{
+        navigate("/connectchatapp/dashboardadmin")
+    }
     const changeName = async(req,res) => {
         try {
             await axios.post('https://ultramarine-hen-kilt.cyclic.app/changename',{
@@ -107,9 +112,12 @@ const ProfileUser = () => {
             <img className=" photoProfile rounded-5" src={photo} alt="photouser" height={150} width={150} />
             <h3 className="nameProfile text-center mt-3">{name}</h3>
             <p className="textProfile text-secondary">{email}</p>
+            <p className="textProfile text-secondary">{role}</p>
             <div className="lineHorizontal"></div>
             <button className="tombol1"onClick={handleShow}>Change name</button>
             <button className="tombol1 mt-4 bg-danger" onClick={deleteAccount}>Delete Account</button>
+            <br />
+            <button className={`${role === admin ? 'tombol1' : 'roleUser'}`} onClick={navigateAdmin} >Admin</button>
         </div>
     )
 }

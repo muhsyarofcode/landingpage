@@ -24,6 +24,9 @@
     --bg3 : #4c4c4c;
 
 }
+.roleUser{
+    display: none;
+}
 .customize{
     height: 100vh;
     display: flex;
