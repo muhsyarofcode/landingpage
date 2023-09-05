@@ -17,8 +17,9 @@ const Portal = () => {
         <div>
         <section className="ContainerLoginSignup">
             <div className="ContainerSignup">
-                    <Button className="m-2" onClick={AuthGoogle} variant="warning"><img className="m-1" src={googleSvg} alt="svg" height={25}/> Sign up with Google </Button>
-                    <Button className="m-2" onClick={AuthFacebook} variant="warning"><img className="m-1" src={facebookSvg} alt="svg" height={25}/> Sign up with Facebook </Button>
+                    <Button className="signUp m-2" onClick={AuthGoogle} variant="warning"><img className="m-1" src={googleSvg} alt="svg" height={25}/> Sign up with Google </Button>
+                    <Button className="signUp m-2" onClick={AuthFacebook} variant="warning"><img className="m-1" src={facebookSvg} alt="svg" height={25}/> Sign up with Facebook </Button>
+                    <p className="textCrtpass  text-secondary">already signed up but haven't created a password to log in? <a className="linkCrtpass" href="/Connectcrtpass">try here</a></p>
             </div>
             <div className="VerticalLine"></div>
             <div className="">

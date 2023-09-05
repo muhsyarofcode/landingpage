@@ -18,7 +18,7 @@ const Login = () => {
             },{
                 withCredentials:true
             });
-            navigate("/Connectdashboard");
+            navigate("/connectchatapp/startchat");
         } catch (error) {
             if(error.response){
                 setMsg(error.response.data.msg)

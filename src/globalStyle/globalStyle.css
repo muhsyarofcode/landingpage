@@ -24,12 +24,144 @@
     --bg3 : #4c4c4c;
 
 }
+.customize{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.publicChat{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.privatChat{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.sendButton{
+    border-radius: 0 10px 10px 0;
+    border: none;
+    width: 10em;
+}
+.textMasage{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    resize: none;
+    overflow: hidden;
+}
+.controlMasage{
+    height: 10vh;
+}
+.textMasage{
+    border-radius: 10px 0 0 10px;
+    border: none;
+    width: 100%;
+}
+.chatmasageOwn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.ownChat{
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(1px);
+    border-radius: 10px 10px 0 10px;
+    box-shadow: #000000 -1px 1px 4px;
+    margin-right: 5px;
+    max-width: 70%;
+}
+.notownChat{
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(1px);
+    border-radius: 10px 10px 10px 0;
+    box-shadow: #000000 1px 1px 4px;
+    margin-left: 5px;
+    max-width: 70%;
+}
+.chatmasagenotOwn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.chat{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.chat::-webkit-scrollbar{
+    display: none;
+}
+.groupTitle{
+    height: 5vh;
+    font-family: 'Lora', serif;
+}
+.textProfile{
+    font-family: 'Lora', serif;
+}
+.nameProfile{
+    font-family: 'Lora', serif;
+}
+.chatApp{
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.userProfile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lineHorizontal{
+    height: 2px;
+    width: 80%;
+    border-top: solid var(--bg3) 2px;
+    margin: 2em 0;
+}
+.apps{
+    background-image: url(../assets/bgLogin.jpg);
+    width: 100%;
+}
+.groupChat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.groupChat li{
+    text-shadow: var(--bg3) 2px 2px;
+    list-style: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.groupChat li:hover{
+    transform: scale(1.2);
+}
+.groupLink{
+    text-decoration: none;
+}
+
 .createPassword{
     background-image: url("../assets/bgLogin.jpg");
     height: 100vh;
 }
+.linkCrtpass{
+    text-decoration: none;
+}
 .linkFooter{
     text-decoration: none;
+}
+.textCrtpass{
+    width: 80%;
+}
+.signUp{
+    width: 17em;
 }
 .VerticalLine2{
     height: 2em;
@@ -51,9 +183,11 @@
     height: 81.5vh;
 }
 .ContainerSignup{
+    width: 23%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .load{
     height: 100vh;
@@ -162,15 +296,11 @@
     padding: 0;
 }
 .imgandtext{
-    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 87vw;
 }
-.imgandtext h3{
-    position: absolute;
-    bottom: 10%;
-    left: 45%;
-    color: var(--teks);
-    font-family: 'Dancing Script', cursive;
-}
+
 .wraper{
     margin-left: 5em;
 }
@@ -183,9 +313,20 @@
 .dinamik-teks li{
     font-family: 'Lora', serif;
 }
+.zoomIn{
+    overflow: hidden;
+    border-radius: 60%;
+    box-shadow: #cfb022 10px 2px;
+}
 .ft-img{
-    width: 47vw;
-    height: 47vw;
+    border-radius: 60%;
+    width: 30vw;
+    height: 30vw;
+    transition: 1s;
+}
+.ft-img:hover{
+    transform: scale(2)
+    translateY(50px);
 }
 .dinamik-teks{
     height: 90px;
@@ -249,26 +390,14 @@
     width: 10em;
     height: 3em;
     border-radius: 5em;
-    border: solid var(--bg2) 2px;
+    border: solid var(--bg3) 2px;
 }
 .tombol1:hover{
     background-color: var(--bg3);
-    border: solid #e781d6 2px;
+    border:solid var(--yellow) 2px;
+    box-shadow: #0d6efd 4px 4px;
 }
-.tombol2{
-    border: none;
-    color: var(--teks3);
-    background-color: #3a3a3a;
-    width: 10em;
-    height: 3em;
-    border-radius: 5em;
-    border: solid var(--bg2) 2px;
 
-}
-.tombol2:hover{
-    background-color: var(--bg3);
-    border: solid var(--yellow) 2px;
-}
 .icon-user{
     margin-right: 5px;
     margin-bottom: 2px;
@@ -529,8 +658,7 @@
     .imgandtext{
         display: flex;
         justify-content: center;
-        width: 80%;
-        height: 65vh;
+        width: 50%;
         margin-top: 7em;
         margin-bottom: 1em;
     }
@@ -614,6 +742,26 @@
     
 }
 @media screen and (max-width: 800px) {
+    .groupTitle{
+        margin-top: 5px;
+    }
+    .textCrtpass{
+        text-align: center;
+        width: 20em;
+    }
+    .ft-img:hover{
+        transform: scale(2)
+        translateY(30px);
+    }
+    .sendButton{
+        width: 5em;
+    }
+    .ownChat{
+        width: 80%;
+    }
+    .notownChat{
+        width: 80%;
+    }
     .VerticalLine{
         height: 2px;
         width: 20em;

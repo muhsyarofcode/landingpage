@@ -14,14 +14,14 @@ function Navigasibar() {
     return (
       
       <div>
-        <Offcanvas placement='end' show={show} onHide={handleClose} >
+        <Offcanvas className="bg-secondary" placement='end' show={show} onHide={handleClose} >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>MSH Profile</Offcanvas.Title>
+          <Offcanvas.Title className='text-white'>MSH Profile</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className='wraper-introduce'>
             <div className='intro'>
-              <p className='text-intro'>MSH is a startup created by my brother using the initials of our names. This website will serve and provide information about information technology, as for the MSH website that has been created to serve and provide information about  <a className='linkText-intro' href='https://rintikberisik.com/'>rintikberisik</a> literacy. And also follow MSH social media to get more information.</p>
+              <p className='text-intro text-white'>MSH is a startup created by my brother using the initials of our names. This website will serve and provide information about information technology, as for the MSH website that has been created to serve and provide information about  <a className='linkText-intro text-warning' href='https://rintikberisik.com/'>rintikberisik</a> literacy. And also follow MSH social media to get more information.</p>
               <div className='link-sosmed'>
                 <a className='img-link1' href='https://www.instagram.com/msh.co_bookstore/'><span/></a>
                 <a className='img-link2' href='https://www.instagram.com/m.s.h_go/'><span/></a>

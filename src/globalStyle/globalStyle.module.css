@@ -83,7 +83,6 @@
     .textr{
         opacity: 0.6;
         color: var(--teks2);
-        font-weight: 600;
         margin: 0px 5px;
     }
     .skillName div::before{

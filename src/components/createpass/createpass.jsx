@@ -45,7 +45,7 @@ const CreatePass = (res,req) => {
                     </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password for app</Form.Label>
+                    <Form.Label className="d-flex">Password for app <p className="text-danger">**</p></Form.Label>
                     <Form.Control type="password" name="password" className="input" placeholder="********" 
                     value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </Form.Group>
@@ -59,7 +59,8 @@ const CreatePass = (res,req) => {
                     Create password
                 </Button>
             </Form>
-            <p className="mt-3">already have a password? <a className="text-primary" href="/Connect">go back to connect</a></p>
+            <p className="mt-3 text-danger">**Don't use password google/facebook</p>
+            <p className="mt-3">already have a password? <a className="linkCrtpass text-primary" href="/Connect">go back to connect</a></p>
         </div>
     </div>
     )
