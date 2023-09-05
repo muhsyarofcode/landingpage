@@ -38,11 +38,10 @@ const DashboardAdmin = () => {
     return(
         <div>
             <h1>dashboard admin</h1>
-            <button className="tombol1" onClick={getUsers}>Data user ConnectApp</button>
+            <button className="tombol1" onClick={getUsers}>Data user</button>
             <div>
-                {files.map((file, idx) => (
-                            <div className="mt-2"  key={idx}>
-                                <Table striped bordered hover>
+                            <div className="tableData m-2 overflow-auto" >
+                                <Table striped bordered hover variant="dark">
                                     <thead>
                                         <tr>
                                         <th>Id</th>
@@ -53,17 +52,18 @@ const DashboardAdmin = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                    {files.map((file, idx) => (
+                                        <tr key={idx}>
                                         <td>{file.id}</td>
                                         <td>{file.name}</td>
                                         <td>{file.email}</td>
                                         <td><img src={file.photo} alt="userphoto" height={30} width={30}/></td>
                                         <td>{file.role}</td>
                                         </tr>
+                                        ))}
                                     </tbody>
                                 </Table>
                             </div>
-                        ))}
             </div>
         </div>
     )

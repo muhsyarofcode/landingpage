@@ -90,6 +90,9 @@
     flex-direction: column;
     align-items: flex-start;
 }
+.tableData{
+    scrollbar-width: 12px;
+}
 .chat{
     height: 85vh;
     display: flex;
