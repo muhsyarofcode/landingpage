@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useRef} from "react";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import send from "../../assets/send.png"
@@ -11,7 +11,7 @@ const PublicChat = () => {
     const [name,setName] = useState("")
     const [message,setMesasage] = useState("")
     const [receivemessage,setReceivemesasage] = useState([])
-    const chatContainer = document.getElementById('chat-container')
+    const messageendref = useRef(null)
 
     const getCurrentDate = () =>{
 
@@ -33,6 +33,10 @@ const PublicChat = () => {
         }, 1000 * 5)
         return ()=> clearInterval(interval)
     },5000)
+
+    const autoScroll = () =>{
+        messageendref.current?.scrollIntoView();
+    }
     const refreshToken = async() => {
         const response = await axios.get('https://ultramarine-hen-kilt.cyclic.app/token',{
             withCredentials: true
@@ -48,7 +52,7 @@ const PublicChat = () => {
             withCredentials: true
         });
         setReceivemesasage(response.data)
-        scrollToBottom()
+        autoScroll()
     }
     const SendMessage = async(e,res) => {
         e.preventDefault();
@@ -63,13 +67,10 @@ const PublicChat = () => {
                 withCredentials:true
             });
             setMesasage("")
-            scrollToBottom()
+            autoScroll()
         } catch (error) {
             alert("failed send message")
             }
-    }
-    function scrollToBottom() {
-        chatContainer.scrollTop(chatContainer.scrollHeight)
     }
     return (
         <div className="publicChat">
@@ -93,6 +94,7 @@ const PublicChat = () => {
                             <br />
                         </div>
                     ))}
+                    <div ref={messageendref}/>
                 </div>
                 <form className="controlMasage d-flex" onSubmit={SendMessage} >
                     <textarea name="chat" id="chat" className="textMasage"
