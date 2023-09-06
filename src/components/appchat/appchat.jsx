@@ -46,7 +46,7 @@ const AppChat = () => {
         <div className="d-block">
             <div className="chatApp">
                 <div className="sideBar" style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
-                <CDBSidebar textColor="#fff" backgroundColor="#333">
+                <CDBSidebar textColor="#fff" className="bg-dark">
                     <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
                         ConnectApp
                     </CDBSidebarHeader>
@@ -68,7 +68,7 @@ const AppChat = () => {
                     </CDBSidebarMenu>
                     </CDBSidebarContent>
                     <CDBSidebarFooter>
-                            <CDBSidebarMenuItem icon="arrow-left" className="text-danger" onClick={out}>Log Out</CDBSidebarMenuItem>
+                            <CDBSidebarMenuItem icon="arrow-left" className="text-danger mb-5" onClick={out}>Log Out</CDBSidebarMenuItem>
                     </CDBSidebarFooter>
                 </CDBSidebar>
                 </div>

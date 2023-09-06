@@ -43,26 +43,27 @@
     flex-direction: column;
 }
 .sendButton{
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 50px 50px 0;
     border: none;
-    width: 10em;
+    width: 5em;
 }
 .textMasage{
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    padding-left: 10px;
+    padding-left: 30px;
+    padding-top: 5px;
     outline: none;
     border: none;
     resize: none;
-    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 50px 0 0 50px;
+    border: none;
+    width: 70%;
+}
+.textMasage::-webkit-scrollbar {
+    display: none;
 }
 .controlMasage{
-    height: 10vh;
-}
-.textMasage{
-    border-radius: 10px 0 0 10px;
-    border: none;
-    width: 100%;
+    justify-content: center;
+    height: 7vh;
 }
 .chatmasageOwn{
     display: flex;

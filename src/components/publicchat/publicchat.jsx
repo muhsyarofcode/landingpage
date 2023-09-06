@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
-
+import send from "../../assets/send.png"
 
 const PublicChat = () => {
     const [email,setEmail] = useState("")
@@ -97,7 +97,7 @@ const PublicChat = () => {
                     <textarea name="chat" id="chat" className="textMasage"
                     value={message} onChange={(e) => setMesasage(e.target.value)}
                     ></textarea>
-                    <button  className="sendButton">send</button>
+                    <button className="sendButton bg-white"><img src={send} alt="paperplane"/></button>
                 </form>
         </div>
     )
