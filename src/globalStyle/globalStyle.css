@@ -211,6 +211,14 @@
     font-size: 2rem;
     font-family: 'Dosis', sans-serif;
 }
+.FooterMini{
+    font-size: 14px;
+}
+.linkFooterMini{
+    font-size: 12px;
+    text-decoration: none;
+    margin: 1px;
+}
 .link{
     margin: 1em;
 }

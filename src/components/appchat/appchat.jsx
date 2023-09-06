@@ -1,5 +1,4 @@
 import React,{useEffect} from "react";
-import Footer from "../footer/footer";
 import {Outlet} from 'react-router-dom'
 import {
     CDBSidebar,
@@ -69,6 +68,12 @@ const AppChat = () => {
                     </CDBSidebarContent>
                     <CDBSidebarFooter>
                             <CDBSidebarMenuItem icon="arrow-left" className="text-danger mb-5" onClick={out}>Log Out</CDBSidebarMenuItem>
+                            <div className='d-flex-column text-center fs-6'>
+                                <a className='linkFooterMini text-white' href="/privacypolicy">Privacy Policy</a><br />
+                                <a className='linkFooterMini text-white' href="/term&condition">Term & Condition</a><br />
+                                <a className='linkFooterMini text-white' href="/disclaimer">Disclaimer</a><br />
+                                <p className='FooterMini text-white mt-2' >Copyright &copy; 2023 by MSH </p>
+                            </div>
                     </CDBSidebarFooter>
                 </CDBSidebar>
                 </div>
@@ -76,7 +81,6 @@ const AppChat = () => {
                 <Outlet/>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

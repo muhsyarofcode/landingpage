@@ -77,7 +77,7 @@ const PublicChat = () => {
             <div className="titleGroup">
                 <h1 className="groupTitle text-center text-dark">Public Chat</h1>
             </div>
-            <div className="chat" id="chat-container">
+            <div className="chat">
                 {receivemessage.map((message,idx)=>(
                             <div className="mt-1"  key={idx}>
                             <br />
@@ -92,9 +92,9 @@ const PublicChat = () => {
                                 </div>
                             </div>
                             <br />
+                            <div ref={messageendref}/>
                         </div>
                     ))}
-                    <div ref={messageendref}/>
                 </div>
                 <form className="controlMasage d-flex" onSubmit={SendMessage} >
                     <textarea name="chat" id="chat" className="textMasage"
