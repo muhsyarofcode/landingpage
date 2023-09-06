@@ -52,7 +52,7 @@ const PublicChat = () => {
             withCredentials: true
         });
         setReceivemesasage(response.data)
-        if (response.data !== null) {autoScroll();}
+        if (receivemessage !== null) {autoScroll();}
     }
     const SendMessage = async(e,res) => {
         e.preventDefault();
