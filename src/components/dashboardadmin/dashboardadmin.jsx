@@ -49,6 +49,7 @@ const DashboardAdmin = () => {
                                         <th>Email</th>
                                         <th>Photo</th>
                                         <th>Role</th>
+                                        <th>Activity</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -59,6 +60,7 @@ const DashboardAdmin = () => {
                                         <td>{file.email}</td>
                                         <td><img src={file.photo} alt="userphoto" height={30} width={30}/></td>
                                         <td>{file.role}</td>
+                                        <td>{file.activity}</td>
                                         </tr>
                                         ))}
                                     </tbody>
