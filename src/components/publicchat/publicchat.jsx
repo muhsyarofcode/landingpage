@@ -56,7 +56,7 @@ const PublicChat = () => {
     }
     const SendMessage = async(e,res) => {
         e.preventDefault();
-        if(message == null) {alert("empty message, please fill in")}
+        if(message === "") {alert("empty message, please fill in")}
         else{
             try {
                 await axios.post('https://ultramarine-hen-kilt.cyclic.app/sendmessage',{
