@@ -33,7 +33,9 @@ const PublicChat = () => {
         }, 1000 * 5)
         return ()=> clearInterval(interval)
     },5000)
-
+    useEffect(()=> {
+        autoScroll();
+    },[receivemessage]);
     const autoScroll = () =>{
         messageendref.current?.scrollIntoView();
     }
@@ -52,7 +54,6 @@ const PublicChat = () => {
             withCredentials: true
         });
         setReceivemesasage(response.data)
-        autoScroll()
     }
     const SendMessage = async(e,res) => {
         e.preventDefault();
