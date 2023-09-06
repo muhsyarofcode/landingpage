@@ -2,6 +2,8 @@ import React,{useState,useEffect} from "react";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import send from "../../assets/send.png"
+import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const PublicChat = () => {
     const [email,setEmail] = useState("")
@@ -28,7 +30,6 @@ const PublicChat = () => {
     useEffect(()=>{
         const interval = setInterval(() => {
         receiveMessage();
-        console.log("every 10s")
         }, 1000 * 5)
         return ()=> clearInterval(interval)
     },5000)
@@ -68,7 +69,7 @@ const PublicChat = () => {
             }
     }
     function scrollToBottom() {
-        chatContainer.scrollTo(0, chatContainer.scrollHeight)
+        chatContainer.scrollTop(chatContainer.scrollHeight)
     }
     return (
         <div className="publicChat">
@@ -83,10 +84,10 @@ const PublicChat = () => {
                             <div className={`${email === message.email ? 'ownChat' : 'notownChat'}`}>
                                     <div className="d-flex">
                                         <img className="m-1 rounded-5" src={message.photo} alt="userphoto" height={30} width={30} />
-                                        <p className="m-1"><strong>{message.name}</strong></p>
+                                        <p className="m-1"><strong>{message.name || <Skeleton/>}</strong></p>
                                     </div>
-                                    <p className="m-1">{message.message}</p>
-                                    <p className="text-secondary m-2">{message.createdAt}</p>
+                                    <p className="m-1">{message.message || <Skeleton/>}</p>
+                                    <p className="text-secondary m-2">{message.createdAt || <Skeleton/>}</p>
                                 </div>
                             </div>
                             <br />

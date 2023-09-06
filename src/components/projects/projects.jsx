@@ -1,5 +1,5 @@
 import '../../globalStyle/globalStyle.css'
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -31,8 +31,8 @@ function Projects (){
             pathLength: 1,
             opacity: 1,
             transition: {
-              pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
-              opacity: { delay, duration: 0.01 }
+              pathLength: { delay, type: "spring", duration: 5, bounce: 0 },
+              opacity: { delay, duration: 0.01 },
             }
           };
         }
@@ -112,9 +112,6 @@ function Projects (){
         variants={draw}
         custom={1.5}
       />
-      
-      
-     
     </motion.svg>
             </div>
             <div className='motion'>
@@ -185,14 +182,12 @@ function Projects (){
                 className="mySwiper"
             >
                 {slide1.map((data,id)=>
-                    <div className='d-flex'>
-                    <SwiperSlide >
+                    <SwiperSlide key={id} >
                         <h1 className='titleProject position-absolute text-warning'>{data.name}</h1>
-                        <a key={id} href={data.link} target='_blank' rel="noopener noreferrer">
-                        <img key={id} src={data.value} className='kotak' alt='gambar'/>
+                        <a href={data.link } target='_blank' rel="noopener noreferrer">
+                        <img src={data.value} className='kotak' alt='gambar'/>
                         </a>
                     </SwiperSlide>
-                    </div>
                 )}
             </Swiper>
             </div>

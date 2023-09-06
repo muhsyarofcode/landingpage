@@ -24,6 +24,7 @@
     align-items: end;
     height: 100vh;
     overflow: hidden;
+    width: 100%;
   }
   .motion h1{
     font-family: 'Dosis', sans-serif;
@@ -112,7 +113,7 @@
     fill: transparent;
   }
   
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1200px) {
     .motion{
       display: none;
   }

@@ -436,6 +436,7 @@
     font-weight: 600 ;
 }
 .swiper {
+    margin-bottom: 5em;
     width: 240px;
     height: 320px;
   }
@@ -766,6 +767,9 @@
     
 }
 @media screen and (max-width: 800px) {
+    .swiper {
+        margin-bottom: 0;
+    }
     .groupTitle{
         margin-top: 5px;
     }

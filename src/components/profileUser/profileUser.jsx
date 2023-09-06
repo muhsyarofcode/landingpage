@@ -5,6 +5,8 @@ import { useNavigate} from "react-router-dom"
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const ProfileUser = () => {
     const [role, setRole] = useState('');
@@ -110,9 +112,9 @@ const ProfileUser = () => {
             </Modal>
             <h1 className="textProfile">Profile</h1>
             <img className=" photoProfile rounded-5" src={photo} alt="photouser" height={150} width={150} />
-            <h3 className="nameProfile text-center mt-3">{name}</h3>
-            <p className="textProfile text-secondary">{email}</p>
-            <p className="textProfile text-secondary">{role}</p>
+            <h3 className="nameProfile text-center mt-3">{name || <Skeleton/>}</h3>
+            <p className="textProfile text-secondary">{email || <Skeleton/>}</p>
+            <p className="textProfile text-secondary">{role || <Skeleton/>}</p>
             <div className="lineHorizontal"></div>
             <button className="tombol1"onClick={handleShow}>Change name</button>
             <button className="tombol1 mt-4 bg-danger" onClick={deleteAccount}>Delete Account</button>
