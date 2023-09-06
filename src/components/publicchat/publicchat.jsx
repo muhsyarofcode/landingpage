@@ -26,6 +26,7 @@ const PublicChat = () => {
         }
     useEffect(()=> {
         refreshToken();
+        autoScroll();
     },[]);
     useEffect(()=>{
         const interval = setInterval(() => {
