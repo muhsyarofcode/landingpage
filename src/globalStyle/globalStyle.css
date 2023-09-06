@@ -49,7 +49,7 @@
 }
 .textMasage{
     padding-left: 30px;
-    padding-top: 5px;
+    padding-top: 10px;
     outline: none;
     border: none;
     resize: none;
@@ -63,7 +63,7 @@
 }
 .controlMasage{
     justify-content: center;
-    height: 7vh;
+    height: 7.5vh;
 }
 .chatmasageOwn{
     display: flex;

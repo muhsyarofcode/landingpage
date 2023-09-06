@@ -56,8 +56,6 @@ const PublicChat = () => {
     }
     const SendMessage = async(e,res) => {
         e.preventDefault();
-        if(message === "") {alert("empty message, please fill in")}
-        else{
             try {
                 await axios.post('https://ultramarine-hen-kilt.cyclic.app/sendmessage',{
                     email: email,
@@ -73,7 +71,6 @@ const PublicChat = () => {
             } catch (error) {
                 alert("failed send message")
                 }
-        }
     }
     return (
         <div className="publicChat">
@@ -102,7 +99,8 @@ const PublicChat = () => {
                 <form className="controlMasage d-flex" onSubmit={SendMessage} >
                     <textarea name="chat" id="chat" className="textMasage"
                     value={message} onChange={(e) => setMesasage(e.target.value)}
-                    ></textarea>
+                    placeholder="type a message" required
+                    />
                     <button className="sendButton bg-white"><img src={send} alt="paperplane"/></button>
                 </form>
         </div>
