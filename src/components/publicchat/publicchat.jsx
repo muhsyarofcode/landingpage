@@ -56,21 +56,24 @@ const PublicChat = () => {
     }
     const SendMessage = async(e,res) => {
         e.preventDefault();
-        try {
-            await axios.post('https://ultramarine-hen-kilt.cyclic.app/sendmessage',{
-                email: email,
-                name: name,
-                message: message,
-                photo: photo,
-                createdAt: getCurrentDate()
-            },{
-                withCredentials:true
-            });
-            setMesasage("")
-            autoScroll()
-        } catch (error) {
-            alert("failed send message")
-            }
+        if(message == null) {alert("empty message, please fill in")}
+        else{
+            try {
+                await axios.post('https://ultramarine-hen-kilt.cyclic.app/sendmessage',{
+                    email: email,
+                    name: name,
+                    message: message,
+                    photo: photo,
+                    createdAt: getCurrentDate()
+                },{
+                    withCredentials:true
+                });
+                setMesasage("")
+                autoScroll()
+            } catch (error) {
+                alert("failed send message")
+                }
+        }
     }
     return (
         <div className="publicChat">
