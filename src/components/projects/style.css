@@ -17,5 +17,113 @@
     width: 15em;
     height: 15em;
   }
- 
+  .motion{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .motion h1{
+    font-family: 'Dosis', sans-serif;
+    font-size: 7rem;
+  }
+  .motionDiv1{
+    height: 9em;
+    width: 9em;
+    margin: 9px;
+    margin-bottom: 20px;
+    background-color: #fcd1d1;
+    border-radius: 100%;
+    box-shadow: #000 2px 2px 5px
+  }
+  .motionDiv2{
+    height: 9em;
+    width: 9em;
+    margin: 9px;
+    margin-bottom: 20px;
+    background-color: #f7efc5;
+    border-radius: 100%;
+    box-shadow: #000 2px 2px 5px
+  }
+  .motionDiv3{
+    height: 9em;
+    width: 9em;
+    margin: 9px;
+    margin-bottom: 20px;
+    background-color: #d8f3c6;
+    border-radius: 100%;
+    box-shadow: #000 2px 2px 5px
+  }
+  .motionDiv4{
+    height: 9em;
+    width: 9em;
+    margin: 9px;
+    margin-bottom: 20px;
+    background-color: #b7f7dc;
+    border-radius: 100%;
+    box-shadow: #000 2px 2px 5px
+  }
+  .motionDiv5{
+    height: 9em;
+    width: 9em;
+    margin: 9px;
+    margin-bottom: 20px;
+    background-color: #a5eff5;
+    border-radius: 100%;
+    box-shadow: #000 2px 2px 5px
+  }
+  .motionDiv6{
+    height: 9em;
+    width: 9em;
+    margin: 9px;
+    margin-bottom: 20px;
+    background-color: #b4c5eb;
+    border-radius: 100%;
+    box-shadow: #000 2px 2px 5px
+  }
+  .motionDiv7{
+    height: 9em;
+    width: 9em;
+    margin: 9px;
+    margin-bottom: 20px;
+    background-color: #eec6f7;
+    border-radius: 100%;
+    box-shadow: #000 2px 2px 5px
+  }
+  .motionDiv8{
+    height: 9em;
+    width: 9em;
+    margin: 9px;
+    margin-bottom: 20px;
+    background-color: #ebbccf;
+    border-radius: 100%;
+    box-shadow: #000 2px 2px 5px
+  }
+ .motionSvg{
+  display: none;
+ }
+  circle,
+  rect,
+  line {
+    stroke-width: 10px;
+    stroke-linecap: round;
+    fill: transparent;
+  }
   
+  @media screen and (max-width: 1310px) {
+    .motion{
+      display: none;
+  }
+  .motionSvg{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+  }
+  }
+  @media screen and (max-width: 00px) {
+
+}

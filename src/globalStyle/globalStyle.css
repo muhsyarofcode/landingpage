@@ -819,7 +819,7 @@
         display: none;
     }
     .container-navbar{
-        background-color: rgb(20, 20, 20);
+        background-color: rgba(20, 20, 20, 0.950);
     }
 }
 @media screen and (max-width: 600px) {
