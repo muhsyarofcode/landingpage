@@ -71,11 +71,11 @@ const PublicChat = () => {
         chatContainer.scrollTo(0, chatContainer.scrollHeight)
     }
     return (
-        <div className="publicChat" id="chat-container">
+        <div className="publicChat">
             <div className="titleGroup">
                 <h1 className="groupTitle text-center text-dark">Public Chat</h1>
             </div>
-            <div className="chat">
+            <div className="chat" id="chat-container">
                 {receivemessage.map((message,idx)=>(
                             <div className="mt-1"  key={idx}>
                             <br />
